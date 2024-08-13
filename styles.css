@@ -523,6 +523,12 @@
     border-radius: 30px;
 }
 
+.contact-img:hover{
+    pointer-events: auto;
+    transform: scale(1.08);
+    transition: 0.5s;
+}
+
 .title-contact{
     margin-bottom: 40px;
 }
