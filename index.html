@@ -6,17 +6,38 @@
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css" integrity="sha512-Kc323vGBEqzTmouAECnVceyQqyqdsSiqLQISBL29aUW4U/M7pSPA/gEUZQqv1cwx4OnYxTxve5UMg5GT6L4JJg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
     <link rel="stylesheet" href="styles.css">
+    <link rel="Icon" type="image/x-icon" href="./img/favc.png"> 
+    <!-- Primary Meta Tags -->
+    <title>Moonlight Col</title>
+    <meta name="title" content="Moonlight Colombia" />
+    <meta name="description" content="Descubre la mejor tecnología y diseño de almohadas para un buen descanso y éxito en tu vida." />
+
+    <!-- Open Graph / Facebook -->
+    <meta property="og:type" content="website" />
+    <meta property="og:url" content="https://plukart.github.io/Moonlighport/" />
+    <meta property="og:title" content="Moonlight Colombia" />
+    <meta property="og:description" content="Descubre la mejor tecnología y diseño de almohadas para un buen descanso y éxito en tu vida." />
+    <meta property="og:image" content="https://metatags.io/images/meta-tags.png" />
+
+    <!-- Twitter -->
+    <meta property="twitter:card" content="summary_large_image" />
+    <meta property="twitter:url" content="https://plukart.github.io/Moonlighport/" />
+    <meta property="twitter:title" content="Moonlight Colombia" />
+    <meta property="twitter:description" content="Descubre la mejor tecnología y diseño de almohadas para un buen descanso y éxito en tu vida." />
+    <meta property="twitter:image" content="https://metatags.io/images/meta-tags.png" />
+
+<!-- Meta Tags Generated with https://metatags.io -->
 
     <title>Moonlight</title>
 </head>
 <body>
     <nav id="Inicio" class="nav-bar">
-        <img src="logo.png" alt="logo">
+        <i id="logo" class="fa-solid fa-moon"></i>
             <ul class="nav-links">
-                <li><a class="links" href="index.html">Inicio</a></li>
-                <li><a class="links"  href="store.html">Tienda</a></li> 
-                <li><a class="links" href="about.html">Conocenos</a></li>
-                <li><a class="links" href="contact.html">Contacto</a></li>
+                <li><a class="links" href="#index.html">Inicio</a></li>
+                <li><a class="links"  href="#store">Tienda</a></li> 
+                <li><a class="links" href="#about">Conocenos</a></li>
+                <li><a class="links" href="#contact">Contacto</a></li>
             </ul>
     </nav>
 
@@ -31,7 +52,7 @@
 
     <h2 class="title">Almohadas de algodón Siliconado</h2>
 
-    <section class="cards">
+    <section id="store" class="cards">
 
         <!--card-1-->
 
@@ -39,12 +60,21 @@
             <img src="./img/muestra.jpg" alt="Almohadas satinadas de algodon" class="card-img">
             <div class="card-body">
               <h2 class="card-title">Linea Bronce</h2>
+
               <p class="card-text">Relleno de algodón siliconado 
                 Tela satinada hipoalergenica
                 Con o sin cremallera
                 60x40cm</p>
-              <button class="card-btn">Ver más</button>
+
+
+                
+                <!--boton-modal-->
+              <div>
+                <button class="card-btn"><label for="btn-modal">Ver más</label></button>
+
+              </div>
             </div>
+
           </div>
 
            <!--card-2-->
@@ -175,25 +205,47 @@
 
     </section>
 
-    <section class="about">
-        <h2 class="title">Conocenos</h2>
+    <section id="about" class="about">
+       
         <div class="about-container">
             <img class="about-img" src="./img/almohadasmuestras.jpg">
             <div class="about-text">
                 <h3 class="title-about">Almohadas Moonlight Col</h3>
                 <p class="text-about">
-                    Moonlight es una empresa dedicada al diseño y confeccion,de almohadas, cerrado de colchones, etc, de alta tecnologia que buscan brindar una ergonomia y comodidad necesaria  para un buen descanso y reposo del cuello.
+                    Moonlight es una empresa dedicada al diseño y confeccion, de almohadas, cerrado de colchones, etc, de alta tecnologia que buscan brindar una ergonomia y comodidad necesaria  para un buen descanso y reposo del cuello.
                 </p>  
                 <div class="about-btns">
-                    <button class="about-btn">ver mas</button>
+                    <button class="about-btn"><label for="btn-modal">ver mas</label></button>
                 </div>
+
+                 <!--Ventana Modal--->
+
+              <input type="checkbox" id="btn-modal">
+              <div class="container-modal">
+                  <div class="content-modal">
+                      <h2>¡Bienvenido!</h2>
+                      <img src="./img/almohadasmuestras.jpg" alt="Almohadas Moonlight Col">
+                      <p>Somos una empresa dedica a cambiar la vida de 
+                        las personas, creemos fielmente que si una 
+                        persona logra consiliar el sueño de manera 
+                        oportuna, estara lista para los retos del 
+                        proximo dia y asi obtener la vide de sus sueños.</p>
+                      <div class="btn-cerrar">
+                          <label for="btn-modal">Cerrar</label>
+                      </div>
+                  </div>
+                  <label for="btn-modal" class="cerrar-modal"></label>
+              </div>
+       <!--Fin de Ventana Modal-->
             </div>
         </div>
     </section>
 
+      
+
     <!----contact-->
 
-    <section class="contact">
+    <section id="contact" class="contact">
         <div class="contact-container">
             <div class="contact-img">
                 <img class="contact-img" src="./img/maps.jpg" alt="Almohadas Moonlight Col">
@@ -207,7 +259,7 @@
                         Email:<br>
                         moonlight.calidad@gmail.com</p>
                         <div class="contact-btns">
-                            <button class="contact-btn">Pedidos: 3016040162</button>
+                            <button class="contact-btn"><a class="wa-me" target="_blank" href="https://wa.me/3118666339?text=Buen día, me gustaría hacer un pedido, ¿Siguen disponibles">Pedidos: 3016040162</a></button>
                         </div>
                 </div>
                 
